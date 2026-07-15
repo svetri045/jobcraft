@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.*
+
+# Upload files
+uploads/
+
+# Logs
+*.log
+
+# Build
+dist/
+build/
+
+# Vercel
+.vercel/

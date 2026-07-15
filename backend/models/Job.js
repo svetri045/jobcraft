@@ -8,6 +8,12 @@ const jobSchema = new mongoose.Schema(
       trim: true,
     },
 
+    company: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+
     description: {
       type: String,
       required: true,
@@ -26,53 +32,41 @@ const jobSchema = new mongoose.Schema(
       trim: true,
     },
 
-
-    company: {
+    jobType: {
       type: String,
       required: true,
       trim: true,
     },
 
-
-    // Number of openings
-    vacancies: {
-      type: Number,
+    experience: {
+      type: String,
       required: true,
-      default: 1,
+      trim: true,
     },
 
-
-    // Job expiry date
-    expiryDate: {
-      type: Date,
+    skills: {
+      type: [String],
       required: true,
     },
 
-
-    createdBy: {
+    recruiter: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
       required: true,
     },
 
+    applicants: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+      },
+    ],
   },
   {
-    timestamps:true,
+    timestamps: true,
   }
 );
 
-
-// Auto remove expired jobs
-jobSchema.index(
-  { expiryDate: 1 },
-  { expireAfterSeconds: 0 }
-);
-
-
-const Job = mongoose.model(
-  "Job",
-  jobSchema
-);
-
+const Job = mongoose.model("Job", jobSchema);
 
 export default Job;
