@@ -1,0 +1,296 @@
+.recruiterDashboardPage{
+  min-height:100vh;
+  padding:100px 30px 40px;
+  background:linear-gradient(
+    135deg,
+    #020617,
+    #0f172a,
+    #1e1b4b
+  );
+  color:#fff;
+  font-family:"Inter",sans-serif;
+}
+
+.recruiterHeader{
+  border-left:4px solid #6366f1;
+  padding-left:20px;
+  margin-bottom:35px;
+}
+
+.recruiterHeader h2{
+  margin:0;
+  font-size:30px;
+  font-weight:700;
+}
+
+.recruiterHeader p{
+  margin-top:8px;
+  opacity:.75;
+  font-size:14px;
+}
+
+.recruiterTabs{
+  display:flex;
+  gap:15px;
+  margin-bottom:30px;
+  flex-wrap:wrap;
+}
+
+.recruiterTabs button{
+  padding:12px 25px;
+  border:none;
+  border-radius:12px;
+  background:#ffffff10;
+  color:white;
+  cursor:pointer;
+  transition:.3s;
+  font-weight:600;
+}
+
+.recruiterTabs button:hover{
+  background:#ffffff20;
+}
+
+.recruiterTabs .activeTab{
+  background:#6366f1;
+  box-shadow:0 10px 20px rgba(99,102,241,.35);
+}
+
+.recruiterTableCard{
+  background:rgba(255,255,255,.05);
+  backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:20px;
+  padding:25px;
+  overflow-x:auto;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:900px;
+}
+
+th{
+  color:#cbd5e1;
+  font-size:14px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+}
+
+th,
+td{
+  padding:16px;
+  text-align:left;
+}
+
+tr{
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+tbody tr:hover{
+  background:rgba(255,255,255,.04);
+}
+
+.applicantName{
+  font-weight:600;
+}
+
+.emailLink{
+  color:#60a5fa;
+  text-decoration:none;
+  font-size:13px;
+}
+
+.emailLink:hover{
+  text-decoration:underline;
+}
+
+.resumeLink{
+  color:#818cf8;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.resumeLink:hover{
+  text-decoration:underline;
+}
+
+.status{
+  display:inline-block;
+  padding:6px 12px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:700;
+  text-transform:uppercase;
+  background:#475569;
+}
+
+.status.pending{
+  background:#475569;
+}
+
+.status.selected{
+  background:#059669;
+}
+
+.status.interview{
+  background:#2563eb;
+}
+
+.status.rejected{
+  background:#dc2626;
+}
+
+.actionGroup{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.actionGroup button,
+.jobButtons button{
+  border:none;
+  padding:9px 14px;
+  border-radius:10px;
+  color:white;
+  cursor:pointer;
+  font-weight:600;
+  transition:.3s;
+}
+
+.actionGroup button:hover,
+.jobButtons button:hover{
+  transform:translateY(-2px);
+}
+
+.selectBtn{
+  background:#059669;
+}
+
+.interviewBtn{
+  background:#2563eb;
+}
+
+.rejectBtn{
+  background:#dc2626;
+}
+
+.jobList{
+  display:grid;
+  gap:16px;
+}
+
+.jobRow{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:18px;
+  padding:20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  transition:.3s;
+}
+
+.jobRow:hover{
+  transform:translateY(-3px);
+  border-color:#6366f1;
+}
+
+.jobRow h4{
+  margin:0 0 6px;
+  font-size:18px;
+}
+
+.jobButtons{
+  display:flex;
+  gap:10px;
+}
+
+.editBtn{
+  background:#4f46e5;
+}
+
+.deleteBtn{
+  background:#e11d48;
+}
+
+.recruiterLoading{
+  text-align:center;
+  margin-top:120px;
+  color:white;
+  font-size:18px;
+}
+
+/* Tablet */
+
+@media (max-width:768px){
+
+  .recruiterDashboardPage{
+    padding:85px 15px 25px;
+  }
+
+  .recruiterHeader h2{
+    font-size:24px;
+  }
+
+  .recruiterTabs{
+    flex-direction:column;
+  }
+
+  .recruiterTabs button{
+    width:100%;
+  }
+
+  .recruiterTableCard{
+    padding:15px;
+  }
+
+  table{
+    font-size:13px;
+  }
+
+  .actionGroup{
+    flex-direction:column;
+  }
+
+  .actionGroup button{
+    width:100%;
+  }
+
+  .jobRow{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+  }
+
+  .jobButtons{
+    width:100%;
+  }
+
+  .jobButtons button{
+    flex:1;
+  }
+}
+
+/* Mobile */
+
+@media (max-width:480px){
+
+  .recruiterDashboardPage{
+    padding:80px 10px 20px;
+  }
+
+  .recruiterHeader h2{
+    font-size:22px;
+  }
+
+  .recruiterHeader p{
+    font-size:13px;
+  }
+
+  .recruiterTableCard{
+    padding:12px;
+  }
+}

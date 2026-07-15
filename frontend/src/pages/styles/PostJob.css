@@ -1,0 +1,224 @@
+/* =================================
+   POST JOB PAGE
+================================= */
+
+.postJob-page{
+  min-height:100vh;
+  padding:100px 20px 40px;
+  background:#020617;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  box-sizing:border-box;
+  font-family:"Inter",sans-serif;
+  color:white;
+}
+
+/* =================================
+   CARD
+================================= */
+
+.postJob-card{
+  width:100%;
+  max-width:850px;
+  background:#0f172a;
+  padding:35px;
+  border-radius:22px;
+  border:1px solid #1e293b;
+  box-shadow:0 20px 40px rgba(0,0,0,.4);
+  box-sizing:border-box;
+}
+
+/* =================================
+   HEADER
+================================= */
+
+.postJob-header{
+  text-align:center;
+  background:linear-gradient(
+    90deg,
+    #4f46e5,
+    #7c3aed
+  );
+  padding:25px;
+  border-radius:16px;
+  margin-bottom:30px;
+}
+
+.postJob-header h2{
+  margin:0 0 8px;
+  font-size:26px;
+}
+
+.postJob-header p{
+  margin:0;
+  color:#e0e7ff;
+  font-size:14px;
+}
+
+/* =================================
+   FORM
+================================= */
+
+.postJob-form{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.postJob-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+/* =================================
+   FIELD
+================================= */
+
+.postJob-field{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.postJob-field label{
+  color:#cbd5e1;
+  font-size:14px;
+  font-weight:600;
+}
+
+.postJob-field input,
+.postJob-field textarea{
+  width:100%;
+  padding:12px 14px;
+  background:#1e293b;
+  border:1px solid #334155;
+  color:white;
+  border-radius:10px;
+  outline:none;
+  box-sizing:border-box;
+  font-size:14px;
+  transition:.3s;
+}
+
+.postJob-field input{
+  height:46px;
+}
+
+.postJob-field textarea{
+  min-height:140px;
+  resize:vertical;
+}
+
+.postJob-field input:focus,
+.postJob-field textarea:focus{
+  border-color:#6366f1;
+  box-shadow:0 0 0 3px rgba(99,102,241,.15);
+}
+
+/* =================================
+   BUTTON
+================================= */
+
+.postJob-button{
+  width:100%;
+  height:48px;
+  border:none;
+  border-radius:10px;
+  background:#6366f1;
+  color:white;
+  font-size:15px;
+  font-weight:700;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.postJob-button:hover{
+  background:#4f46e5;
+  transform:translateY(-2px);
+}
+
+/* =================================
+   MOBILE VIEW
+================================= */
+
+@media (max-width:768px){
+
+  .postJob-page{
+    padding:85px 15px 25px;
+  }
+
+  .postJob-card{
+    padding:22px;
+    border-radius:18px;
+  }
+
+  .postJob-header{
+    padding:18px;
+    margin-bottom:20px;
+  }
+
+  .postJob-header h2{
+    font-size:22px;
+  }
+
+  .postJob-header p{
+    font-size:13px;
+  }
+
+  .postJob-grid{
+    grid-template-columns:1fr;
+    gap:15px;
+  }
+
+  .postJob-field input{
+    height:44px;
+  }
+
+  .postJob-field textarea{
+    min-height:120px;
+  }
+
+  .postJob-button{
+    height:44px;
+  }
+
+}
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width:480px){
+
+  .postJob-page{
+    padding:80px 10px 20px;
+  }
+
+  .postJob-card{
+    padding:18px;
+  }
+
+  .postJob-header h2{
+    font-size:20px;
+  }
+
+  .postJob-header p{
+    font-size:12px;
+  }
+
+  .postJob-field label{
+    font-size:13px;
+  }
+
+  .postJob-field input,
+  .postJob-field textarea{
+    font-size:13px;
+  }
+
+  .postJob-button{
+    font-size:14px;
+  }
+
+}

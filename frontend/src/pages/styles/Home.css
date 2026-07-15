@@ -1,0 +1,372 @@
+/* =========================================
+   HOME PAGE WRAPPER
+========================================= */
+
+.homePageWrapper {
+  min-height:100vh;
+  padding:90px 20px 40px;
+  background:linear-gradient(
+    135deg,
+    #090d16 0%,
+    #151936 35%,
+    #1e1b4b 70%,
+    #311042 100%
+  );
+  color:#ffffff;
+  font-family:"Inter",sans-serif;
+  overflow-x:hidden;
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.homePageHeroSection {
+  text-align:center;
+  max-width:950px;
+  margin:0 auto 100px;
+  animation:homePageFadeUp 1s ease;
+}
+
+.homePageHeroBadge {
+  display:inline-block;
+  font-size:14px;
+  font-weight:800;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  padding:8px 18px;
+  border-radius:30px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.12);
+  color:#67e8f9;
+}
+
+.homePageHeroSection h1 {
+  margin-top:25px;
+  margin-bottom:20px;
+  font-size:clamp(2.5rem,6vw,4.8rem);
+  font-weight:900;
+  line-height:1.1;
+  background:linear-gradient(
+    90deg,
+    #ffffff,
+    #67e8f9,
+    #c084fc
+  );
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.homePageHeroSection p {
+  max-width:720px;
+  margin:auto;
+  font-size:20px;
+  line-height:1.8;
+  color:#cbd5e1;
+}
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.homePageSectionHeading {
+  text-align:center;
+  font-size:42px;
+  font-weight:900;
+  margin-bottom:20px;
+  background:linear-gradient(
+    90deg,
+    #22d3ee,
+    #8b5cf6
+  );
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* =========================================
+   PORTAL CARDS
+========================================= */
+
+.homePagePortalSection {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:40px;
+  margin-bottom:120px;
+}
+
+.homePageGlassCard {
+  width:420px;
+  padding:40px 35px;
+  text-align:center;
+  border-radius:30px;
+  background:rgba(255,255,255,.07);
+  backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,.15);
+  box-shadow:0 20px 50px rgba(0,0,0,.35);
+  transition:.4s ease;
+}
+
+.homePageGlassCard:hover {
+  transform:translateY(-10px);
+  border-color:#22d3ee;
+}
+
+.homePageGlassCard img {
+  width:160px;
+  height:160px;
+  object-fit:cover;
+  border-radius:50%;
+  margin-bottom:25px;
+  border:4px solid rgba(255,255,255,.2);
+}
+
+.homePageGlassCard h2 {
+  font-size:30px;
+  margin-bottom:15px;
+  color:#f8fafc;
+}
+
+.homePageGlassCard p {
+  color:#cbd5e1;
+  line-height:1.8;
+  margin-bottom:25px;
+}
+
+/* =========================================
+ BUTTON
+========================================= */
+
+.homePageGlassCard button,
+.homePageCTASection button {
+  width:100%;
+  padding:15px 25px;
+  border:none;
+  border-radius:14px;
+  cursor:pointer;
+  font-weight:700;
+}
+
+.homePagePrimaryButton {
+  background:linear-gradient(
+    135deg,
+    #8b5cf6,
+    #06b6d4
+  );
+  color:white;
+}
+
+/* =========================================
+ COMPANIES
+========================================= */
+
+.homePageCompaniesSection {
+  text-align:center;
+  margin-bottom:120px;
+}
+
+.homePageCompaniesSection p {
+  color:#94a3b8;
+  letter-spacing:3px;
+}
+
+.homePageCompaniesSection div {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:50px;
+  margin-top:35px;
+}
+
+.homePageCompaniesSection span {
+  font-size:26px;
+  font-weight:800;
+  color:#f8fafc;
+}
+
+/* =========================================
+ STATS
+========================================= */
+
+.homePageStatsSection {
+  max-width:1200px;
+  margin:0 auto 120px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.homePageStatCard {
+  padding:40px 25px;
+  text-align:center;
+  border-radius:25px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+}
+
+.homePageStatCard h3 {
+  font-size:45px;
+  margin-bottom:10px;
+  background:linear-gradient(
+    90deg,
+    #22d3ee,
+    #a78bfa
+  );
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* =========================================
+ FEATURES
+========================================= */
+
+.homePageFeaturesSection {
+  max-width:1200px;
+  margin:0 auto 120px;
+  text-align:center;
+}
+
+.homePageFeaturesSection h2 {
+  font-size:42px;
+  font-weight:900;
+  background:linear-gradient(
+    90deg,
+    #22d3ee,
+    #c084fc
+  );
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.homePageFeaturesSection > p {
+  display:inline-block;
+  margin-bottom:45px;
+  padding:12px 25px;
+  color:#e2e8f0;
+  background:rgba(255,255,255,.08);
+  border-radius:50px;
+  border:1px solid rgba(255,255,255,.12);
+}
+
+.homePageFeatureGrid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.homePageFeatureCard {
+  padding:30px;
+  border-radius:22px;
+  background:rgba(255,255,255,.05);
+  border-left:4px solid #8b5cf6;
+  transition:.3s;
+}
+
+.homePageFeatureCard:hover {
+  transform:translateY(-8px);
+}
+
+/* =========================================
+ CTA
+========================================= */
+
+.homePageCTASection {
+  max-width:850px;
+  margin:0 auto 100px;
+  padding:60px 40px;
+  text-align:center;
+  border-radius:30px;
+  background:linear-gradient(
+    rgba(139,92,246,.25),
+    rgba(6,182,212,.20)
+  );
+}
+
+/* =========================================
+ FOOTER
+========================================= */
+
+.homePageFooter {
+  padding:40px 20px;
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,.1);
+  color:#94a3b8;
+}
+
+/* =========================================
+ MOBILE RESPONSIVE
+========================================= */
+
+@media(max-width:768px){
+
+  .homePageWrapper {
+    padding:75px 12px 30px;
+  }
+
+  .homePageHeroSection {
+    margin-bottom:70px;
+  }
+
+  .homePageHeroSection h1 {
+    font-size:32px;
+  }
+
+  .homePageHeroSection p {
+    font-size:15px;
+  }
+
+  .homePageSectionHeading {
+    font-size:28px;
+  }
+
+  .homePagePortalSection {
+    gap:20px;
+    margin-bottom:80px;
+  }
+
+  .homePageGlassCard {
+    width:100%;
+    padding:25px 18px;
+  }
+
+  .homePageGlassCard img {
+    width:110px;
+    height:110px;
+  }
+
+  .homePageStatsSection {
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .homePageFeatureGrid {
+    grid-template-columns:1fr;
+  }
+
+  .homePageFeaturesSection h2 {
+    font-size:28px;
+  }
+
+  .homePageCTASection {
+    padding:35px 20px;
+  }
+
+}
+
+/* =========================================
+ ANIMATION
+========================================= */
+
+@keyframes homePageFadeUp {
+
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}

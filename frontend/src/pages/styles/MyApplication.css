@@ -1,0 +1,496 @@
+/* ========================================
+   MY APPLICATIONS PAGE
+======================================== */
+
+.myApplicationsPageWrapper {
+
+  min-height:100vh;
+
+  padding:110px 30px 40px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #080b14,
+    #111827,
+    #0f172a
+  );
+
+  color:#f8fafc;
+
+  font-family:"Inter",sans-serif;
+
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.myApplicationsHeaderSection {
+
+  max-width:1200px;
+
+  margin:0 auto 35px;
+
+}
+
+.myApplicationsTitle {
+
+  font-size:42px;
+
+  font-weight:800;
+
+  margin-bottom:10px;
+
+  background:
+  linear-gradient(
+    90deg,
+    #8b5cf6,
+    #06b6d4
+  );
+
+  -webkit-background-clip:text;
+
+  -webkit-text-fill-color:transparent;
+
+}
+
+.myApplicationsSubtitle {
+
+  color:#94a3b8;
+
+  font-size:17px;
+
+}
+
+/* ========================================
+   GRID
+======================================== */
+
+.myApplicationsGrid {
+
+ max-width:1200px;
+
+ margin:auto;
+
+ display:grid;
+
+ grid-template-columns:
+ repeat(auto-fit,minmax(340px,1fr));
+
+ gap:24px;
+
+}
+
+/* ========================================
+   APPLICATION CARD
+======================================== */
+
+.myApplicationCard {
+
+ background:
+
+ rgba(17,24,39,0.85);
+
+ backdrop-filter:blur(14px);
+
+ border:
+
+ 1px solid rgba(139,92,246,0.15);
+
+ border-radius:22px;
+
+ padding:24px;
+
+ box-shadow:
+
+ 0 15px 35px rgba(0,0,0,0.45);
+
+ transition:.35s ease;
+
+}
+
+.myApplicationCard:hover {
+
+ transform:translateY(-8px);
+
+ border-color:#8b5cf6;
+
+ box-shadow:
+
+ 0 20px 45px rgba(139,92,246,0.25);
+
+}
+
+/* ========================================
+   HEADER SECTION
+======================================== */
+
+.myApplicationCardHeader {
+
+ display:flex;
+
+ justify-content:space-between;
+
+ align-items:flex-start;
+
+ gap:15px;
+
+ margin-bottom:20px;
+
+}
+
+.myApplicationJobTitle {
+
+ font-size:22px;
+
+ font-weight:700;
+
+ margin:0 0 8px;
+
+ color:#f8fafc;
+
+}
+
+.myApplicationCompanyName {
+
+ font-size:15px;
+
+ margin:0;
+
+ color:#06b6d4;
+
+ font-weight:500;
+
+}
+
+/* ========================================
+   STATUS BADGE
+======================================== */
+
+.myApplicationStatusBadge {
+
+ padding:7px 14px;
+
+ border-radius:999px;
+
+ font-size:12px;
+
+ font-weight:700;
+
+ text-transform:uppercase;
+
+ letter-spacing:.5px;
+
+ white-space:nowrap;
+
+}
+
+.myApplicationStatusBadge.pending {
+
+ background:#f59e0b;
+
+ color:#080b14;
+
+}
+
+.myApplicationStatusBadge.accepted {
+
+ background:#10b981;
+
+ color:#080b14;
+
+}
+
+.myApplicationStatusBadge.rejected {
+
+ background:#ef4444;
+
+ color:white;
+
+}
+
+.myApplicationStatusBadge.interview {
+
+ background:#8b5cf6;
+
+ color:white;
+
+}
+
+/* ========================================
+   INFO BOX
+======================================== */
+
+.myApplicationInfoBox {
+
+ margin-top:15px;
+
+ padding:14px;
+
+ border-radius:14px;
+
+ background:#080b14;
+
+ border:
+
+ 1px solid rgba(6,182,212,0.2);
+
+ display:flex;
+
+ flex-direction:column;
+
+ gap:6px;
+
+}
+
+.myApplicationInfoBox small {
+
+ color:#94a3b8;
+
+ font-size:12px;
+
+}
+
+.myApplicationInfoBox strong {
+
+ color:#f8fafc;
+
+ font-size:14px;
+
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.myApplicationFooter {
+
+ margin-top:18px;
+
+ display:flex;
+
+ justify-content:space-between;
+
+ gap:10px;
+
+ color:#94a3b8;
+
+ font-size:13px;
+
+}
+
+/* ========================================
+   EMPTY STATE
+======================================== */
+
+.myApplicationsEmptyCard {
+
+ text-align:center;
+
+ padding:60px 20px;
+
+ border-radius:20px;
+
+ background:
+
+ rgba(17,24,39,0.8);
+
+ border:
+
+ 1px solid rgba(139,92,246,0.2);
+
+ color:#cbd5e1;
+
+ font-size:20px;
+
+}
+
+/* ========================================
+   LOADING
+======================================== */
+
+.myApplicationsLoading {
+
+ min-height:100vh;
+
+ display:flex;
+
+ justify-content:center;
+
+ align-items:center;
+
+ color:#f8fafc;
+
+ font-size:20px;
+
+}
+
+/* ========================================
+   SCROLLBAR
+======================================== */
+
+::-webkit-scrollbar {
+
+ width:8px;
+
+}
+
+::-webkit-scrollbar-track {
+
+ background:#080b14;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+ background:#8b5cf6;
+
+ border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+ background:#06b6d4;
+
+}
+
+/* ========================================
+   MOBILE VIEW
+   2 APPLICATIONS PER ROW
+======================================== */
+
+@media(max-width:768px){
+
+.myApplicationsPageWrapper{
+
+ padding:85px 8px 25px;
+
+}
+
+.myApplicationsHeaderSection{
+
+ margin-bottom:20px;
+
+}
+
+.myApplicationsTitle{
+
+ font-size:24px;
+
+}
+
+.myApplicationsSubtitle{
+
+ font-size:13px;
+
+}
+
+.myApplicationsGrid{
+
+ grid-template-columns:
+
+ repeat(2,1fr);
+
+ gap:10px;
+
+}
+
+.myApplicationCard{
+
+ padding:12px;
+
+ border-radius:14px;
+
+}
+
+.myApplicationCardHeader{
+
+ flex-direction:column;
+
+ gap:8px;
+
+ margin-bottom:10px;
+
+}
+
+.myApplicationJobTitle{
+
+ font-size:13px;
+
+}
+
+.myApplicationCompanyName{
+
+ font-size:11px;
+
+}
+
+.myApplicationStatusBadge{
+
+ padding:5px 8px;
+
+ font-size:9px;
+
+}
+
+.myApplicationInfoBox{
+
+ padding:8px;
+
+ margin-top:8px;
+
+ border-radius:8px;
+
+}
+
+.myApplicationInfoBox small{
+
+ font-size:9px;
+
+}
+
+.myApplicationInfoBox strong{
+
+ font-size:10px;
+
+}
+
+.myApplicationFooter{
+
+ flex-direction:column;
+
+ gap:5px;
+
+ font-size:10px;
+
+}
+
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media(max-width:380px){
+
+.myApplicationsGrid{
+
+ gap:8px;
+
+}
+
+.myApplicationCard{
+
+ padding:10px;
+
+}
+
+.myApplicationsTitle{
+
+ font-size:21px;
+
+}
+
+}

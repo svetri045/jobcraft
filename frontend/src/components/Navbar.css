@@ -1,0 +1,278 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html,
+body,
+#root {
+  width:100%;
+  min-height:100%;
+  overflow-x:hidden;
+}
+
+/* =========================
+   JOB PORTAL NAVBAR
+========================= */
+
+.jpNavContainer {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 5%;
+  background:rgba(17,24,39,0.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  z-index:1000;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.jpNavLogo {
+  text-decoration:none;
+  color:#818cf8;
+  font-size:1.6rem;
+  font-weight:800;
+  white-space:nowrap;
+  transition:.3s;
+}
+
+.jpNavLogo:hover {
+  color:#a5b4fc;
+}
+
+/* =========================
+   DESKTOP LINKS
+========================= */
+
+.jpNavLinksWrapper {
+  display:flex;
+  align-items:center;
+  gap:25px;
+}
+
+.jpNavLinksWrapper a {
+  text-decoration:none;
+  color:#f8fafc;
+  font-size:15px;
+  font-weight:600;
+  position:relative;
+  transition:.3s;
+}
+
+.jpNavLinksWrapper a::after {
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:2px;
+  background:#6366f1;
+  transition:.3s;
+}
+
+.jpNavLinksWrapper a:hover::after,
+.jpNavLinksWrapper a.active::after {
+  width:100%;
+}
+
+.jpNavLinksWrapper a:hover,
+.jpNavLinksWrapper a.active {
+  color:#818cf8;
+}
+
+/* =========================
+   REGISTER BUTTON
+========================= */
+
+.jpNavRegisterButton {
+  background:linear-gradient(
+    135deg,
+    #6366f1,
+    #8b5cf6
+  );
+  color:white !important;
+  padding:10px 18px;
+  border-radius:10px;
+}
+
+.jpNavRegisterButton:hover {
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(99,102,241,.35);
+}
+
+/* =========================
+   USER SECTION
+========================= */
+
+.jpNavUserSection {
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.jpNavUserName {
+  color:white;
+  font-size:14px;
+  font-weight:600;
+}
+
+.jpNavLogoutButton {
+  background:#ef4444;
+  color:white;
+  border:none;
+  padding:9px 16px;
+  border-radius:8px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.jpNavLogoutButton:hover {
+  background:#dc2626;
+  transform:translateY(-2px);
+}
+
+/* =========================
+   HAMBURGER BUTTON
+========================= */
+
+.jpNavMenuButton {
+  display:none;
+  width:42px;
+  height:42px;
+  position:relative;
+  background:none;
+  border:none;
+  cursor:pointer;
+}
+
+.jpNavMenuButton span {
+  position:absolute;
+  left:7px;
+  width:28px;
+  height:3px;
+  background:white;
+  border-radius:20px;
+  transition:.35s;
+}
+
+.jpNavMenuButton span:nth-child(1){
+  top:11px;
+}
+
+.jpNavMenuButton span:nth-child(2){
+  top:19px;
+}
+
+.jpNavMenuButton span:nth-child(3){
+  top:27px;
+}
+
+.jpNavMenuActive span:nth-child(1){
+  top:19px;
+  transform:rotate(45deg);
+}
+
+.jpNavMenuActive span:nth-child(2){
+  opacity:0;
+}
+
+.jpNavMenuActive span:nth-child(3){
+  top:19px;
+  transform:rotate(-45deg);
+}
+
+/* =========================
+   MOBILE OVERLAY
+========================= */
+
+.jpNavOverlay {
+  display:none;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+  .jpNavContainer {
+    height:65px;
+    padding:0 15px;
+  }
+
+  .jpNavLogo {
+    font-size:1.3rem;
+  }
+
+  .jpNavMenuButton {
+    display:block;
+    margin-left:auto;
+  }
+
+  .jpNavLinksWrapper {
+    position:fixed;
+    top:65px;
+    right:-300px;
+    width:280px;
+    height:calc(100vh - 65px);
+    background:#111827;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+    padding:25px 20px;
+    transition:.35s ease;
+    overflow-y:auto;
+    box-shadow:-10px 0 30px rgba(0,0,0,.4);
+    z-index:1001;
+  }
+
+  .jpNavMobileOpen {
+    right:0;
+  }
+
+  .jpNavLinksWrapper a {
+    width:100%;
+    text-align:center;
+    padding:12px;
+    border-radius:10px;
+  }
+
+  .jpNavRegisterButton {
+    width:100%;
+  }
+
+  .jpNavUserSection {
+    width:100%;
+    flex-direction:column;
+  }
+
+  .jpNavLogoutButton {
+    width:100%;
+  }
+
+  .jpNavOverlay {
+    display:block;
+    position:fixed;
+    top:65px;
+    left:0;
+    width:100%;
+    height:calc(100vh - 65px);
+    background:rgba(0,0,0,.45);
+    z-index:999;
+  }
+
+}

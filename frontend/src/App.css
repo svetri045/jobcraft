@@ -1,0 +1,9 @@
+.jobPortalRootWrapper {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.jobPortalMainContent {
+  width: 100%;
+  min-height: 100vh;
+}

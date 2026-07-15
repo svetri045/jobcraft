@@ -1,0 +1,174 @@
+/* ========================================
+   JOB LISTING PAGE
+======================================== */
+
+.jobListingPageWrapper {
+  max-width:1400px;
+  margin:0 auto;
+  min-height:100vh;
+  padding:90px 24px 50px;
+  font-family:"Inter",sans-serif;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.jobListingHeaderSection {
+  text-align:center;
+  margin-bottom:55px;
+  padding-top:5px;
+}
+
+.jobListingMainTitle {
+  font-size:clamp(2rem,5vw,3.5rem);
+  font-weight:800;
+  margin-bottom:12px;
+  background:linear-gradient(
+    135deg,
+    #4f46e5,
+    #7c3aed
+  );
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.jobListingSubTitle {
+  color:#64748b;
+  font-size:18px;
+  max-width:650px;
+  margin:auto;
+}
+
+/* ========================================
+   ERROR
+======================================== */
+
+.jobListingErrorBox {
+  background:#fee2e2;
+  color:#b91c1c;
+  padding:16px;
+  border-radius:14px;
+  margin-bottom:30px;
+  text-align:center;
+  font-weight:600;
+}
+
+/* ========================================
+   LOADING
+======================================== */
+
+.jobListingLoadingBox {
+  text-align:center;
+  padding:80px 20px;
+  color:#64748b;
+  font-size:18px;
+  font-weight:500;
+}
+
+/* ========================================
+   EMPTY STATE
+======================================== */
+
+.jobListingEmptyState {
+  text-align:center;
+  background:white;
+  padding:50px 30px;
+  border-radius:24px;
+  border:1px solid #e2e8f0;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+.jobListingEmptyState h3 {
+  font-size:24px;
+  margin-bottom:10px;
+}
+
+.jobListingEmptyState p {
+  color:#64748b;
+}
+
+/* ========================================
+   JOB GRID
+======================================== */
+
+.jobListingGridContainer {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:30px;
+  align-items:stretch;
+}
+
+/* ========================================
+   LARGE LAPTOP
+======================================== */
+
+@media(min-width:1400px){
+
+  .jobListingGridContainer {
+    grid-template-columns:repeat(3,1fr);
+    gap:32px;
+  }
+
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media(max-width:1200px){
+
+  .jobListingPageWrapper {
+    padding:85px 20px 45px;
+  }
+
+  .jobListingGridContainer {
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+  }
+
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media(max-width:768px){
+
+  .jobListingPageWrapper {
+    padding:75px 15px 30px;
+  }
+
+  .jobListingHeaderSection {
+    margin-bottom:40px;
+  }
+
+  .jobListingSubTitle {
+    font-size:16px;
+  }
+
+  .jobListingGridContainer {
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media(max-width:480px){
+
+  .jobListingMainTitle {
+    font-size:32px;
+  }
+
+  .jobListingSubTitle {
+    font-size:15px;
+  }
+
+  .jobListingEmptyState {
+    padding:35px 20px;
+  }
+}

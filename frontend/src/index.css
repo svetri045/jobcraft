@@ -1,0 +1,82 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+
+*,
+*::before,
+*::after {
+
+  margin:0;
+
+  padding:0;
+
+  box-sizing:border-box;
+
+}
+
+
+
+html,
+body,
+#root {
+
+  width:100%;
+
+  min-height:100%;
+
+  overflow-x:hidden;
+
+}
+
+
+
+body {
+
+  background:#111827;
+
+}
+
+
+
+/* Remove default scrollbar space */
+
+::-webkit-scrollbar {
+
+  width:0;
+
+  height:0;
+
+}
+
+
+
+
+/* =========================
+   APP CONTAINER
+========================= */
+
+
+.app-container {
+
+  width:100%;
+
+  min-height:100vh;
+
+  overflow-x:hidden;
+
+}
+
+
+
+
+.app-content {
+
+  width:100%;
+
+  min-height:calc(100vh - 70px);
+
+  padding-top:70px;
+
+  overflow-x:hidden;
+
+}

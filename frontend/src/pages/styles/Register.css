@@ -1,0 +1,186 @@
+/* =========================
+   REGISTER PAGE
+========================= */
+
+.registerPageWrapper{
+  min-height:100vh;
+  padding:100px 20px 30px;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  background:#111827;
+  box-sizing:border-box;
+}
+
+/* =========================
+   GLASS CARD
+========================= */
+
+.registerPageCard{
+  width:100%;
+  max-width:380px;
+  padding:28px;
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(15px);
+  -webkit-backdrop-filter:blur(15px);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:18px;
+  box-shadow:
+    0 20px 40px rgba(0,0,0,.4),
+    0 0 25px rgba(99,102,241,.25);
+  color:white;
+  box-sizing:border-box;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.registerPageTitle{
+  text-align:center;
+  margin:0 0 22px;
+  font-size:24px;
+  font-weight:700;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.registerPageForm{
+  width:100%;
+}
+
+/* =========================
+   INPUT GROUP
+========================= */
+
+.registerPageInputGroup{
+  display:flex;
+  flex-direction:column;
+  margin-bottom:14px;
+}
+
+.registerPageInputGroup label{
+  margin-bottom:6px;
+  color:#e5e7eb;
+  font-size:13px;
+  font-weight:500;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+.registerPageInputField,
+.registerPageSelectField{
+  width:100%;
+  height:42px;
+  padding:0 13px;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:8px;
+  color:white;
+  outline:none;
+  font-size:14px;
+  box-sizing:border-box;
+  transition:.3s;
+}
+
+.registerPageInputField::placeholder{
+  color:#cbd5e1;
+}
+
+.registerPageSelectField{
+  cursor:pointer;
+}
+
+.registerPageSelectField option{
+  color:black;
+  background:white;
+}
+
+.registerPageInputField:focus,
+.registerPageSelectField:focus{
+  border-color:#6366f1;
+  box-shadow:0 0 10px rgba(99,102,241,.5);
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.registerPageSubmitButton{
+  width:100%;
+  height:42px;
+  margin-top:10px;
+  background:#6366f1;
+  color:white;
+  border:none;
+  border-radius:8px;
+  font-size:14px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.registerPageSubmitButton:hover{
+  background:#4f46e5;
+  transform:translateY(-2px);
+}
+
+/* =========================
+   MOBILE VIEW
+========================= */
+
+@media (max-width:480px){
+
+  .registerPageWrapper{
+    padding:90px 15px 20px;
+  }
+
+  .registerPageCard{
+    width:100%;
+    max-width:380px;
+    padding:22px;
+  }
+
+  .registerPageTitle{
+    font-size:21px;
+    margin-bottom:18px;
+  }
+
+  .registerPageInputField,
+  .registerPageSelectField{
+    height:40px;
+    font-size:14px;
+  }
+
+  .registerPageInputGroup{
+    margin-bottom:12px;
+  }
+
+  .registerPageSubmitButton{
+    height:40px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width:360px){
+
+  .registerPageWrapper{
+    padding:85px 10px 15px;
+  }
+
+  .registerPageCard{
+    padding:18px;
+  }
+
+  .registerPageTitle{
+    font-size:19px;
+  }
+
+}

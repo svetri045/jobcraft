@@ -1,0 +1,222 @@
+/* ========================================
+   JOB CARD
+======================================== */
+
+.jobCardWrapper {
+  background:#ffffff;
+  border-radius:18px;
+  padding:20px;
+  border:1px solid #e5e7eb;
+  box-shadow:0 8px 25px rgba(0,0,0,0.08);
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  height:100%;
+  transition:all .3s ease;
+}
+
+.jobCardWrapper:hover {
+  transform:translateY(-5px);
+  box-shadow:0 16px 35px rgba(79,70,229,.15);
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.jobCardHeaderSection {
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:12px;
+}
+
+.jobCardTitle {
+  margin:0;
+  font-size:1.3rem;
+  font-weight:700;
+  color:#111827;
+}
+
+.jobCardCompanyName {
+  margin-top:6px;
+  color:#4f46e5;
+  font-size:14px;
+  font-weight:600;
+}
+
+.jobCardStatusBadge {
+  background:#eef2ff;
+  color:#4f46e5;
+  padding:5px 12px;
+  border-radius:20px;
+  font-size:11px;
+  font-weight:700;
+}
+
+/* ========================================
+ DESCRIPTION
+======================================== */
+
+.jobCardDescription {
+  margin:0;
+  color:#64748b;
+  line-height:1.6;
+  font-size:14px;
+}
+
+/* ========================================
+ META INFO
+======================================== */
+
+.jobCardMetaInfo {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.jobCardMetaInfo span {
+  background:#f8fafc;
+  border:1px solid #e2e8f0;
+  padding:6px 10px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:600;
+  color:#475569;
+}
+
+/* ========================================
+ FOOTER
+======================================== */
+
+.jobCardFooterSection {
+  margin-top:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-top:1px solid #e5e7eb;
+  padding-top:14px;
+}
+
+.jobCardPostedDate {
+  color:#94a3b8;
+  font-size:12px;
+}
+
+.jobCardApplyButton {
+  border:none;
+  cursor:pointer;
+  background:linear-gradient(135deg,#4f46e5,#6366f1);
+  color:white;
+  padding:10px 18px;
+  border-radius:8px;
+  font-size:13px;
+  font-weight:600;
+  transition:.3s ease;
+}
+
+.jobCardApplyButton:hover {
+  transform:translateY(-2px);
+}
+
+.jobCardApplyButton:disabled {
+  background:#cbd5e1;
+  cursor:not-allowed;
+}
+
+/* ========================================
+ NAVBAR GAP FIX
+======================================== */
+
+.jobListingPageWrapper {
+  padding-top:90px;
+}
+
+/* ========================================
+ TABLET
+======================================== */
+
+@media(max-width:768px){
+
+  .jobListingPageWrapper {
+    padding-top:85px;
+  }
+
+  .jobCardWrapper {
+    padding:16px;
+  }
+
+  .jobCardTitle {
+    font-size:1.15rem;
+  }
+
+  .jobCardMetaInfo span {
+    font-size:11px;
+    padding:5px8px;
+  }
+
+  .jobCardFooterSection {
+    flex-direction:column;
+    gap:12px;
+    align-items:stretch;
+  }
+
+  .jobCardApplyButton {
+    width:100%;
+  }
+
+}
+
+/* ========================================
+ MOBILE
+======================================== */
+
+@media(max-width:480px){
+
+  .jobListingPageWrapper {
+    padding-top:80px;
+  }
+
+  .jobCardWrapper {
+    padding:14px;
+    gap:10px;
+  }
+
+  .jobCardTitle {
+    font-size:1rem;
+  }
+
+  .jobCardCompanyName {
+    font-size:13px;
+  }
+
+  .jobCardDescription {
+    font-size:12px;
+  }
+
+  .jobCardMetaInfo {
+    gap:5px;
+  }
+
+  .jobCardMetaInfo span {
+    font-size:10px;
+    padding:4px 7px;
+  }
+
+  .jobCardStatusBadge {
+    font-size:10px;
+    padding:4px 8px;
+  }
+
+  .jobCardPostedDate {
+    text-align:center;
+    font-size:11px;
+  }
+
+  .jobCardApplyButton {
+    width:100%;
+    padding:9px;
+    font-size:12px;
+  }
+
+}
